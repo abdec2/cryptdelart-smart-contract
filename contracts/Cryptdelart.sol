@@ -38,6 +38,9 @@ contract Cryptdelart is ERC1155, Ownable {
     string public unRevealedUri = "https://gateway.pinata.cloud/ipfs/QmTzxe1AvhJt7DSBrrYe9dNGvFE3k2h43FUXJpg71iE4Vx/1.json";
     string public baseURI = "https://gateway.pinata.cloud/ipfs/Qmc1v9Byw8UUSBg9DNvvgmY8srmeF6xya9LyTSmsHgUpk1/";
     string public baseExtension = ".json";
+    string public name = "Cryptdelart NFT Collection";
+
+
 
     address[] public whiteListedUsers;
     address[] public vipUsers;
@@ -188,6 +191,10 @@ contract Cryptdelart is ERC1155, Ownable {
 
     function setReveal(bool _reveal) external onlyOwner {
         reveal = _reveal;
+    }
+
+    function setPresale(bool _presale) external onlyOwner {
+        presale = _presale;
     }
 
     function withdraw() external onlyOwner {

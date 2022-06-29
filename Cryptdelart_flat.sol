@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-
 /** 
 Author: Azim Baig
 email: abdec2@hotmail.com
@@ -12,10 +11,6 @@ email: abdec2@hotmail.com
  ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
                                                                               
 */
-
-// File: @openzeppelin/contracts/utils/Strings.sol
-
-
 // OpenZeppelin Contracts v4.4.1 (utils/Strings.sol)
 
 pragma solidity ^0.8.0;
@@ -1198,7 +1193,24 @@ contract ERC1155 is Context, ERC165, IERC1155, IERC1155MetadataURI {
 
 // File: contracts/Cryptdelart.sol
 
+
+/** 
+Author: Azim Baig
+email: abdec2@hotmail.com
+
+ ██████╗██████╗ ██╗   ██╗██████╗ ████████╗██████╗ ███████╗██╗      █████╗ ██████╗ ████████╗
+██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗╚══██╔══╝██╔══██╗██╔════╝██║     ██╔══██╗██╔══██╗╚══██╔══╝
+██║     ██████╔╝ ╚████╔╝ ██████╔╝   ██║   ██║  ██║█████╗  ██║     ███████║██████╔╝   ██║   
+██║     ██╔══██╗  ╚██╔╝  ██╔═══╝    ██║   ██║  ██║██╔══╝  ██║     ██╔══██║██╔══██╗   ██║   
+╚██████╗██║  ██║   ██║   ██║        ██║   ██████╔╝███████╗███████╗██║  ██║██║  ██║   ██║   
+ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+                                                                              
+*/
+
 pragma solidity ^0.8.4;
+
+
+
 
 contract Cryptdelart is ERC1155, Ownable {
     uint256[] public swimSuit = [1,2,3,4,5,6,7,8];
@@ -1220,6 +1232,9 @@ contract Cryptdelart is ERC1155, Ownable {
     string public unRevealedUri = "https://gateway.pinata.cloud/ipfs/QmTzxe1AvhJt7DSBrrYe9dNGvFE3k2h43FUXJpg71iE4Vx/1.json";
     string public baseURI = "https://gateway.pinata.cloud/ipfs/Qmc1v9Byw8UUSBg9DNvvgmY8srmeF6xya9LyTSmsHgUpk1/";
     string public baseExtension = ".json";
+    string public name = "Cryptdelart NFT Collection";
+
+
 
     address[] public whiteListedUsers;
     address[] public vipUsers;
@@ -1370,6 +1385,10 @@ contract Cryptdelart is ERC1155, Ownable {
 
     function setReveal(bool _reveal) external onlyOwner {
         reveal = _reveal;
+    }
+
+    function setPresale(bool _presale) external onlyOwner {
+        presale = _presale;
     }
 
     function withdraw() external onlyOwner {
