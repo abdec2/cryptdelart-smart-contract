@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
+
 /** 
-Author: Azim Baig
+Author: Azim Baig & Noman ul Haq
+Company: BRDigitech
 email: abdec2@hotmail.com
 
  ██████╗██████╗ ██╗   ██╗██████╗ ████████╗██████╗ ███████╗██╗      █████╗ ██████╗ ████████╗
@@ -11,6 +13,7 @@ email: abdec2@hotmail.com
  ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
                                                                               
 */
+
 // OpenZeppelin Contracts v4.4.1 (utils/Strings.sol)
 
 pragma solidity ^0.8.0;
@@ -1193,20 +1196,6 @@ contract ERC1155 is Context, ERC165, IERC1155, IERC1155MetadataURI {
 
 // File: contracts/Cryptdelart.sol
 
-
-/** 
-Author: Azim Baig
-email: abdec2@hotmail.com
-
- ██████╗██████╗ ██╗   ██╗██████╗ ████████╗██████╗ ███████╗██╗      █████╗ ██████╗ ████████╗
-██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗╚══██╔══╝██╔══██╗██╔════╝██║     ██╔══██╗██╔══██╗╚══██╔══╝
-██║     ██████╔╝ ╚████╔╝ ██████╔╝   ██║   ██║  ██║█████╗  ██║     ███████║██████╔╝   ██║   
-██║     ██╔══██╗  ╚██╔╝  ██╔═══╝    ██║   ██║  ██║██╔══╝  ██║     ██╔══██║██╔══██╗   ██║   
-╚██████╗██║  ██║   ██║   ██║        ██║   ██████╔╝███████╗███████╗██║  ██║██║  ██║   ██║   
- ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
-                                                                              
-*/
-
 pragma solidity ^0.8.4;
 
 
@@ -1229,7 +1218,7 @@ contract Cryptdelart is ERC1155, Ownable {
     uint256 public vipUserMintLimit = 6;    
 
 
-    string public unRevealedUri = "https://gateway.pinata.cloud/ipfs/QmTzxe1AvhJt7DSBrrYe9dNGvFE3k2h43FUXJpg71iE4Vx/1.json";
+    string public unRevealedUri = "https://gateway.pinata.cloud/ipfs/QmXup3miJgep1DbatMdG6nk5dxd3C8G5e9zVip726eteKA";
     string public baseURI = "https://gateway.pinata.cloud/ipfs/Qmc1v9Byw8UUSBg9DNvvgmY8srmeF6xya9LyTSmsHgUpk1/";
     string public baseExtension = ".json";
     string public name = "Cryptdelart NFT Collection";
@@ -1389,6 +1378,14 @@ contract Cryptdelart is ERC1155, Ownable {
 
     function setPresale(bool _presale) external onlyOwner {
         presale = _presale;
+    }
+
+    function setBaseUri(string memory _uri) external onlyOwner {
+        baseURI = _uri;
+    }
+
+    function setUnrevealUri(string memory _uri) external onlyOwner {
+        unRevealedUri = _uri;
     }
 
     function withdraw() external onlyOwner {
