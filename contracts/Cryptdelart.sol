@@ -51,7 +51,7 @@ contract Cryptdelart is ERC1155, Ownable {
 
     enum categories{ swimSuit,sleepWear,sportsWear,casualStyle,elegantStyle,exoticStyle }
 
-    mapping(uint256 => uint256) private tokenAmountMinted;
+    mapping(uint256 => uint256) public tokenAmountMinted;
     mapping(address => uint256) private noOfTokensMintedByUser;
     mapping(address => mapping(categories => uint256)) public noOfTokensMintedByUserPerCategory;
 
