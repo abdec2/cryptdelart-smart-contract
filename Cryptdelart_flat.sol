@@ -1203,8 +1203,6 @@ pragma solidity ^0.8.4;
 contract Cryptdelart is ERC1155, Ownable {
     uint256[] public swimSuit = [1,2,3,4,5,6,7,8];
     uint256[] public maxSupply = [100,100,100,100,100,100,100,100];
-    // uint256[] public costs = [600 ether, 1000 ether, 1500 ether, 3000 ether, 10000 ether, 100000 ether];
-    // uint256[] public presaleCost = [480 ether, 800 ether, 1200 ether, 2400 ether, 8000 ether, 80000 ether];
     uint256 public cost = 0.2 ether;
     uint256 public presaleCost = 0.15 ether;
     uint256 public regularUserMintLimit = 1;
